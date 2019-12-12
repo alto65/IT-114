@@ -12,13 +12,6 @@ import java.io.*;
 import java.net.*;
 import java.util.Random;
 
-/**
- * Client Application -> ClientApp
- * 
- * @author Keerthikan
- * 
- *         ClientApp
- */
 public class ClientApp extends JFrame {
 
 	private static final long serialVersionUID = 1L;
