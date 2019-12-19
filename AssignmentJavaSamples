@@ -1,0 +1,67 @@
+import java.util.*;
+public class AssignmentJavaSamples 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		List<String> myString= new ArrayList<String>();
+		//1
+		myString.add("Eel");
+		myString.add("Cat");
+		myString.add("Dog");
+		myString.add("Fish");
+		myString.add("Lizard");
+		myString.add("Ant");
+		//2
+		Collections.sort(myString);
+		printerMethod(myString);
+		Collections.sort(myString, Collections.reverseOrder());
+		printerMethod(myString);
+		//3
+		Collections.shuffle(myString);
+		//4
+		List<Integer> myInts=new ArrayList<Integer>();
+		for(int i=0; i<10; i++) {
+			myInts.add(i);
+		}
+		int total=0;
+		for(int i=0; i<myInts.size(); i++)
+		{
+			total+=myInts.get(i);
+		}
+		System.out.println("My total: "+total);
+		
+		//TODO using the integer list, print the value and if it is odd or even
+		for(int i=0; i<myInts.size(); i++) {
+			System.out.print("The number is "+i+" and it is ");
+			if(i%2==0)
+				System.out.println("even");
+			else
+				System.out.println("odd");
+		}
+		//5
+		knuthShuffle(myString);
+		printerMethod(myString);
+	}
+	public static void printerMethod(List myList) {
+		for(int i=0; i<myList.size(); i++) {
+			System.out.println(myList.get(i));
+		}
+		
+	}
+	public static void knuthShuffle(List<String> myList)
+	{
+		Random ranInt=new Random();//creates new Random object
+		String savedString=new String();//creates new String object
+			for(int i=0; i<myList.size(); i++) 
+			{
+				int index=ranInt.nextInt(myList.size());//Generates random int between 0 and list size and sets index to that value
+				savedString=myList.get(i);//Saves the string from the index spot i
+				myList.set(i, myList.get(index));
+				myList.set(index, savedString);
+				//these two lines swap the values at i and index for myList
+			
+		}
+	}
+	
+}
