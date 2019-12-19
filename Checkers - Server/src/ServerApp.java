@@ -8,12 +8,6 @@ import java.io.*;
 import java.net.*;
 import java.util.Date;
 
-/**
- * Server Application -> ServerApp
- * @author Keerthikan
- * 
- * Server and establish Connection
- */
 public class ServerApp extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
